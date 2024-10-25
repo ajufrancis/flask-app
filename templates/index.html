@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Selector and File Upload</title>
+</head>
+<body>
+    <h1>Select an Animal</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <input type="radio" id="cat" name="animal" value="cat">
+            <label for="cat">Cat</label>
+        </div>
+        <div>
+            <input type="radio" id="dog" name="animal" value="dog">
+            <label for="dog">Dog</label>
+        </div>
+        <div>
+            <input type="radio" id="elephant" name="animal" value="elephant">
+            <label for="elephant">Elephant</label>
+        </div>
+
+        <h1>Upload a File</h1>
+        <div>
+            <input type="file" name="file">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if image_url %}
+    <h2>Selected Animal:</h2>
+    <img src="{{ image_url }}" alt="Animal Image" width="300">
+    {% endif %}
+
+    {% if file_info %}
+    <h2>Uploaded File Info:</h2>
+    <p><strong>Name:</strong> {{ file_info.name }}</p>
+    <p><strong>Size:</strong> {{ file_info.size }} bytes</p>
+    <p><strong>Type:</strong> {{ file_info.type }}</p>
+    {% endif %}
+</body>
+</html>
+
