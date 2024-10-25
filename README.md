@@ -33,3 +33,30 @@ A simple web application built with Flask that allows users to select an animal 
 git clone https://github.com/your_username/your_repository.git
 cd your_repository
 ```
+2. **Set Up a Virtual Environment (Optional but Recommended)**
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+3. **Install Dependencies**
+```
+pip install Flask
+```
+4. **Add Animal Images**
+
+  Place cat.jpg, dog.jpg, and elephant.jpg in the static/images/ directory.
+
+# Usage
+1. Run the Application
+```
+python app.py
+```
+2. **Access the Web Interface**
+Open your web browser and navigate to `http://127.0.0.1:5000/`
+
+3. **Interact with the Application**
+   - **Select an Animal:** Choose an animal using the radio buttons and click Submit to display its image.
+   - **Upload a File:** Use the file input to select a file and click Submit to view its details.
+   - **Both:** You can select an animal and upload a file simultaneously.
+
+   
